@@ -1,6 +1,19 @@
 import Image from 'next/image'
 import React from 'react'
 
+
+async function handleDelete(id){
+
+  try {
+    const response = await axios.delete(`http://127.0.0.1:8000/api/posts/${id}`)
+  const resdata = response.data
+  console.log(resdata)
+
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export default function ListData({title,rating,gambar}) {
   return (
     <tr>

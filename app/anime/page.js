@@ -7,6 +7,21 @@ export default function BlogPage() {
 
   const [data,setData] = useState([])
 
+
+  async function handleDelete(id){
+
+    try {
+      const response = await axios.delete(`http://127.0.0.1:8000/api/posts/${id}`)
+    const resdata = response.data
+    console.log(resdata)
+    useRouter().push('/consume')
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
     async function fetchdata()
     {
       const response = await axios.get("https://api.jikan.moe/v4/top/anime")

@@ -16,6 +16,7 @@ export default function Navbar() {
           <li><Link href="/anime">Anime</Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/consume">Consume</Link></li>
+          <li><Link href="/blog">blog</Link></li>
         </ul>
       </div>
     </nav>
